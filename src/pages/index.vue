@@ -3,9 +3,7 @@ const route = useRoute()
 </script>
 
 <template>
-  <div>
-    <SButton>
+    <Hello>
       selam
-    </SButton>
-  </div>
+    </Hello>
 </template>

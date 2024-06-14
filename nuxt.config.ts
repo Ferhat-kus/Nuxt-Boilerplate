@@ -12,14 +12,16 @@ export default defineNuxtConfig({
     "nuxt-typed-router",
     "@vueuse/nuxt",
     "@nuxtjs/tailwindcss",
-    "@nuxtjs/i18n"
+    "@nuxtjs/i18n",
+    '@nuxt/test-utils/module',
+    "@nuxt/fonts"
   ],
   shadcn: {
     prefix: 'S', // Sirius Prefix
     componentDir: './src/components/ui',
   },
   vue: {
-    propsDestructure: true
+    propsDestructure: true,
   },
   tailwindcss: {
     viewer: false,
