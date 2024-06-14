@@ -1,7 +1,6 @@
-import { existsSync, readFileSync } from "fs";
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  srcDir: 'src',
   devtools: { enabled: true },
   modules: [
     "@pinia/nuxt",
@@ -13,33 +12,16 @@ export default defineNuxtConfig({
     "nuxt-typed-router",
     "@vueuse/nuxt",
     "@nuxtjs/tailwindcss",
-    "@nuxtjs/i18n",
-    "@vue-macros/nuxt",
-    "@nuxt/eslint",
+    "@nuxtjs/i18n"
   ],
   shadcn: {
-    /**
-     * Prefix for all the imported component
-     */
-    prefix: 'S',
-    /**
-     * Directory that the component lives in.
-     * @default "./components/ui"
-     */
-    componentDir: './components/ui'
+    prefix: 'S', // Sirius Prefix
+    componentDir: './src/components/ui',
   },
-  vite: {
-    vue: {
-      script: {
-        fs: {
-          fileExists(file) {
-            return existsSync(file);
-          },
-          readFile(file) {
-            return readFileSync(file, 'utf-8');
-          },
-        },
-      },
-    },
+  vue: {
+    propsDestructure: true
   },
+  tailwindcss: {
+    viewer: false,
+  }
 })
