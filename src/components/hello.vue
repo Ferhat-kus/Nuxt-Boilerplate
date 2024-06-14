@@ -4,6 +4,6 @@
 
 <template>
     <SCard class="p-5 max-w-xl mx-auto">
-        <slot />
+        Selam
     </SCard>
 </template>
