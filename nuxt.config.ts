@@ -5,7 +5,6 @@ export default defineNuxtConfig({
   modules: [
     "@pinia/nuxt",
     "@pinia-plugin-persistedstate/nuxt",
-    "shadcn-nuxt",
     "nuxt-icon",
     "@nuxt/test-utils",
     "@vee-validate/nuxt",
@@ -14,16 +13,17 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxtjs/i18n",
     '@nuxt/test-utils/module',
-    "@nuxt/fonts"
+    "@nuxt/fonts",
+    "@nuxt/eslint"
   ],
-  shadcn: {
-    prefix: 'S', // Sirius Prefix
-    componentDir: './src/components/ui',
-  },
   vue: {
     propsDestructure: true,
   },
+
   tailwindcss: {
-    viewer: false,
-  }
+  viewer: false,
+  cssPath: '~/assets/css/tailwind.css',
+  },
+
+  compatibilityDate: "2024-07-10"
 })

@@ -1,7 +1,10 @@
 <script setup lang="ts">
-const route = useRoute()
+// const route = useRoute()
 </script>
 
 <template>
-    <Hello />
+    <div>
+        <h1>Allah Diyen Aslan</h1>
+        <Hello/>
+    </div>
 </template>
